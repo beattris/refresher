@@ -23,4 +23,9 @@ export class ShoppingListService {
     // USED TO ADD THE INGREDIENTS PROPERLY
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]){
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
